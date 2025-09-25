@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+}
+
+.admin-sidebar {
+    position: fixed;
+    top: 81px;
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 81px);
+    background-color: #363740;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: transform 0.3s ease;
+    z-index: 1002;
+    overflow-y: auto;
+}
+
+.admin-sidebar .active {
+    font-weight: bold;
+    color: white;
+}
+
+.admin-sidebar h1 {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.admin-sidebar.show {
+    left: 0;
+}
+
+.admin-sidebar a {
+    color: #CECDCD;
+    text-decoration: none;
+    font-size: 25px;
+    transition: 0.2s;
+}
+
+.admin-sidebar a:hover {
+    color: white;
+}
+
+.admin-header {
+    background-color: #363740;
+    padding: 0 2%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1001;
+    width: 100%;
+}
+
+.admin-header-left {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.admin-header-left a {
+    text-decoration: none;
+}
+
+.admin-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 8px;
+    color: white;
+    z-index: 100;
+}
+
+.name-logo {
+    font-size: 35px;
+    color: white;
+    font-weight: bold;
+}
+
+.admin-header-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.admin-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.admin-img img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .admin-sidebar {
+        width: 80%;
+        max-width: 250px;
+        transform: translateX(-100%);
+    }
+
+    .admin-sidebar.show {
+        transform: translateX(0);
+    }
+
+    .admin-menu-btn {
+        display: block;
+    }
+}

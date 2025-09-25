@@ -1,0 +1,61 @@
+.teachers-body {
+  padding: 40px 5% 40px 5%;
+  background-color: #f9f9f9;
+}
+
+.teachers-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.teachers-container h2{
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.img-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+}
+
+.img-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 1px solid black;
+}
+
+.img-card p {
+  margin: 6px 0;
+  color: #444;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.img-card strong {
+  color: #333;
+}
+
+@media screen and (max-width: 600px) {
+  .img-card img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .img-card p {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,146 @@
+.admin-main-teacher {
+    padding: 100px 5% 30px 5%;
+    margin-left: 250px;
+    transition: margin-left 0.3s ease;
+}
+
+.admin-teacher-header h2 {
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.add-teacher-btn {
+    text-align: end;
+    margin: 0 0 15px 0;
+}
+
+.add-btn1 {
+    background-color: #008cdd;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 150px;
+}
+
+.add-btn1:hover {
+    background-color: #0375b8;
+}
+
+.add-teacher-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.admin-teacher-conatainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.admin-teacher-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: contents;
+}
+
+.admin-teacher-card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.teacher-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.admin-teacher-info {
+    text-align: center;
+}
+
+.admin-teacher-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.admin-teacher-info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.action-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.edit-link,
+.delete-link {
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+}
+
+.edit-link {
+    background-color: #28a745;
+    color: white;
+}
+
+.edit-link:hover {
+    background-color: #218838;
+}
+
+.delete-link {
+    background-color: #d9534f;
+    color: white;
+}
+
+.delete-link:hover {
+    background-color: #c9302c;
+}
+
+
+@media screen and (max-width: 768px) {
+    .add-teacher-btn {
+        text-align: center;
+    }
+
+    .admin-main-teacher {
+        margin-left: 0;
+        padding: 100px 5% 30px 5%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .teacher-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .admin-teacher-info h3 {
+        font-size: 18px;
+    }
+
+    .edit-link,
+    .delete-link {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+}
