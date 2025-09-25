@@ -17,6 +17,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "postinstall": "chmod +x ./node_modules/.bin/react-scripts",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -28,6 +29,11 @@
       "react-app/jest"
     ]
   },
+  "engines": {
+  "node": "20.x",
+  "npm": "10.x"
+},
+
   "browserslist": {
     "production": [
       ">0.2%",
