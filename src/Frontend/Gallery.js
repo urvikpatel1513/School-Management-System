@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import galleryImages from "../Frontend/Modules/GalleryImage";
 import "./Style/Gallery.css";
 import axios from "axios";
+import ScrollTop from "./ScrollTop";
 
 function Gallery() {
   const [images, setImages] = useState([]);
@@ -25,20 +26,22 @@ function Gallery() {
 
   return (
     <>
-      <div className="image-gallery">
-        <div className="gallery">
-          <h2>Gallery</h2>
-          <div className="gallery-img">
-            {images.map((image, index) => (
-              <img
-                src={`https://schoolproject.osapplications.com/images/${image.profile}`}
-                key={index}
-                alt={`Gallery-image ${index + 1}`}
-              />
-            ))}
+      <ScrollTop>
+        <div className="image-gallery">
+          <div className="gallery">
+            <h2>Gallery</h2>
+            <div className="gallery-img">
+              {images.map((image, index) => (
+                <img
+                  src={`https://schoolproject.osapplications.com/images/${image.profile}`}
+                  key={index}
+                  alt={`Gallery-image ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </ScrollTop>
     </>
   );
 }
