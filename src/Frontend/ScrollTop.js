@@ -36,7 +36,7 @@ const ScrollTop = ({ children }) => {
           className={`scroll-top ${top ? "show" : ""}`}
           aria-label="Scroll to top"
         >
-          ⬆ Back to Top
+          ⬆
         </button>
       )}
     </>
